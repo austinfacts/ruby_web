@@ -1,0 +1,18 @@
+branch-defaults:
+  master:
+    environment: ruby-web-dev
+    group_suffix: null
+global:
+  application_name: ruby_web
+  branch: null
+  default_ec2_keyname: null
+  default_platform: Ruby 2.4 (Puma)
+  default_region: us-east-1
+  include_git_submodules: true
+  instance_profile: null
+  platform_name: null
+  platform_version: null
+  profile: eb-cli
+  repository: null
+  sc: git
+  workspace_type: Application

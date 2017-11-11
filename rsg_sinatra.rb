@@ -3,7 +3,7 @@ require 'sinatra'
 require './rsg'
 
 get '/' do
-  'Hello work!'
+  '<h1>Hello work!</h1>'
 end
 
 get '/:filename' do

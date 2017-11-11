@@ -1,6 +1,6 @@
 branch-defaults:
   master:
-    environment: ruby-web-dev
+    environment: null
     group_suffix: null
 global:
   application_name: ruby_web

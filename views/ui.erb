@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Some Randomly generated text</h1>
+  <p>Select an option</p>
+  <select name="files" id="selector">
+    <option value="select"></option>
+    <option value="Bionic-Woman-episode.g">Bionic Woman Episode</option>
+    <option value="Bond-movie.g">Bond Movie</option>
+    <option value="Civ-paper.g">Civ Paper</option>
+    <option value="College-rejection-letter.g">College Rejection Letter</option>
+    <option value="CS-assignment-handout.g">CS Assignemnt</option>
+    <option value="CS-nightmare.g">CS Nightmare</option>
+    <option value="Dear-John-letter.g">Dear John letter</option>
+    <option value="Extension-request.g">Extensio Request</option>
+    <option value="Friday-13th-movie.g">Friday 13th Movie</option>
+    <option value="Haiku.g">Haiku</option>
+    <option value="How-they-met-story.g">How they met story</option>
+    <option value="Insult.g">Insult</option>
+    <option value="Kant.g">Kant</option>
+    <option value="Math-expression.g">Math Expression</option>
+    <option value="Microsoft-press-release.g">Microsoft Press Release</option>
+    <option value="Poem.g">Poem</option>
+    <option value="Programming-bug.g">Programming Bug</option>
+    <option value="Star-Trek-episode.g">Star Trek Episode</option>
+    <option value="Wired-sound-bite.g">Wired Sound Bite</option>
+  </select>
+  <button id="submit">Submit</button>
+  <br>
+  <br>
+  <%=	 @data || 'Nothing to show here' %>
+
+<script>
+  submit_button = document.getElementById("submit");
+  selector = document.getElementById("selector");
+
+  submit_button.addEventListener("click", clicked);
+  function clicked() {
+      window.location.href = "http://localhost:4567/index?filename=" + selector.options[selector.selectedIndex].value;
+  }
+</script>
+</body>
+</html>

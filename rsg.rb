@@ -84,8 +84,9 @@ def expand(grammar, non_term="<start>")
   final_string = ''
   string_array = grammar[non_term.downcase] # case insensitive because to_grammar_hash only inputs lowercase
   if non_term == '<start>'
-    string_array.each do |word|
-      word.each do |element|
+    selection = string_array[rand(string_array.length)]
+    selection.each do |element|
+      # word.each do |element|
         if is_non_terminal? element
           final_string += expand(grammar, element)
         else
@@ -94,7 +95,7 @@ def expand(grammar, non_term="<start>")
           else
             final_string += ' ' + element
           end
-        end
+        # end
       end
     end
   else
